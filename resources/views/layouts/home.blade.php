@@ -23,6 +23,21 @@
             <a class="menu-item" href="{{ route('articles.home',  ['category'   =>  $item->slice]) }}">{{ $item->name }}</a>
         @endforeach
     @endif
+    <div class="col-lg-offset-10">
+        @if (Auth::guest())
+            <a href="{{ route('login') }}">Login</a>
+            <a href="{{ route('register') }}">Register</a>
+        @else
+            <a href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                Logout
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+        @endif
+    </div>
 </div>
 <div class="content">
     <header>
