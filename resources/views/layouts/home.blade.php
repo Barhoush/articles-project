@@ -4,11 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="author" content="Steve Smith">
     <title>Barhoush Articles</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <link rel="apple-touch-icon-precomposed" href="{{ asset('images/apple-touch-icon.png') }}" />
     <script src="{{ asset('js/scale.js')}}"></script>
     <script src="{{ asset('js/jquery.min.js')}}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
 </head>
 <body>
 <div class="topnav" id="myTopnav">

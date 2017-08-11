@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-
 class HomeController extends Controller
 {
     //
@@ -24,13 +21,11 @@ class HomeController extends Controller
             ->with('articles',  $articlesCollection)
             ;
     }
-
     public function showArticle($id){
         $article    =   Article::find($id);
         if(!$article){
             throwException(NotFoundHttpException::class);
         }
-
         return  view('home.show')
             ->with('article',   $article);
     }

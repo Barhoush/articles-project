@@ -14,6 +14,9 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+
+Auth::routes();
+
 Route::group(['middleware'  =>  'web'], function (){
     Route::get('/{category?}', [
         'uses'  =>  'HomeController@index',
@@ -26,3 +29,6 @@ Route::group(['middleware'  =>  'web'], function (){
 
 });
 
+
+//
+//Route::get('/home', 'HomeController@index')->name('home');
