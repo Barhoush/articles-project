@@ -322,6 +322,10 @@ body {margin:0; padding: 0;}
     display: inline-block;
     margin: 20px    auto;
 }
+.my-container{
+    display: block;
+    margin: 20px    auto;
+}
 input{
     width: 100%;
 }
