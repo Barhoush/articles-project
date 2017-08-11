@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::group(['middleware'  =>  'web'], function (){
+    Route::get('/{category?}', [
+        'uses'  =>  'HomeController@index',
+        'as'    =>  'articles.home',
+    ]);
+    Route::get('article/{id}', [
+        'uses'  =>  'HomeController@showArticle',
+        'as'    =>  'articles.show'
+    ]);
+
 });
+
