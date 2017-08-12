@@ -9,8 +9,8 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('images/apple-touch-icon.png') }}" />
     <script src="{{ asset('js/scale.js')}}"></script>
     <script src="{{ asset('js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/main.js')}}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
 </head>
 <body>
 <div class="topnav" id="myTopnav">

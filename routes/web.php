@@ -29,6 +29,11 @@ Route::group(['middleware'  =>  'web'], function (){
 
 });
 
-
+Route::group(['middleware'  =>  'auth'], function (){
+    Route::post('comment/{article}', [
+        'uses'  =>  'HomeController@commentArticle',
+        'as'    =>  'articles.comment'
+    ]);
+});
 //
 //Route::get('/home', 'HomeController@index')->name('home');
