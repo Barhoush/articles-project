@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
 use App\Comment;
+use App\Factors;
 use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -64,11 +65,14 @@ class HomeController extends Controller
                 ['message'   =>  'No such article found!']
             );
         }
-
+        $article   =   Article::find($articleId);
+        $factor =   Factors::find($article->category_id);
+        $price  =   $factor->price;
         $comment    =   new Comment();
         $comment    ->  description =   $request->comment;
         $comment    ->  article_id =   $articleId;
         $comment    ->  user_id =   $user   ->  id;
+        $comment    ->  price =   $price;
         $comment    ->  save();
 
         return response()->json(

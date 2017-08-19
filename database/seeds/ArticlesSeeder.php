@@ -16,6 +16,7 @@ class ArticlesSeeder extends Seeder
         $end      = new Datetime('1st Jan 2017');
         $records    =   [
             [
+                'id'    =>  14,
                 'title' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
                 'published' =>  1,
                 'category_id'   =>  1,
@@ -23,6 +24,7 @@ class ArticlesSeeder extends Seeder
                 'created_at'    =>  new DateTime('@' . mt_rand($start->getTimestamp(), $end->getTimestamp())),
             ],
             [
+                'id'    =>  15,
                 'title' => 'Nulla consequat massa quis enim.',
                 'published' =>  1,
                 'category_id'   =>  2,
@@ -30,6 +32,7 @@ class ArticlesSeeder extends Seeder
                 'created_at'    =>  new DateTime('@' . mt_rand($start->getTimestamp(), $end->getTimestamp())),
             ],
             [
+                'id'    =>  16,
                 'title' => 'Donec pede justo, fringilla vel, aliquet nec',
                 'published' =>  1,
                 'category_id'   =>  1,
@@ -39,6 +42,7 @@ Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vit
                 'created_at'    =>  new DateTime('@' . mt_rand($start->getTimestamp(), $end->getTimestamp())),
             ],
             [
+                'id'    =>  17,
                 'title' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
                 'published' =>  1,
                 'category_id'   =>  3,
